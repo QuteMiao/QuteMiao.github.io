@@ -25,7 +25,7 @@
     <div id="top" style="display: block;">
     <div class="bar" style="width: 0;"></div>
     <a class="icon-left image-icon" href="javascript:history.back()"></a>
-    <h3 class="subtitle">驯龙高手</h3>
+    <h3 class="subtitle">《性能之巅》2.7 容量规划</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -39,14 +39,45 @@
     <div class="section">
         <div class="article">
     <div>
-        <h1 class="title">驯龙高手</h1>
+        <h1 class="title">《性能之巅》2.7 容量规划</h1>
         <div class="stuff">
-            <span>六月 09, 2018</span>
+            <span>六月 10, 2018</span>
             
 
         </div>
         <div class="content markdown">
-            <p>敬请期待</p>
+            <blockquote>
+<p>检查系统处理负载的情况，以及系统如何随着负载的增加而扩展。本章主要介绍资源极限和因素分析。</p>
+</blockquote>
+<h2 id="资源极限"><a class="markdownIt-Anchor" href="#资源极限"></a> 资源极限</h2>
+<blockquote>
+<p>研究在负载下会成为系统瓶颈的资源.</p>
+</blockquote>
+<ul>
+<li>监测请求频率随时间的变化</li>
+<li>监测软硬件使用率随时间的变化</li>
+<li>用资源的使用来表示服务的请求情况</li>
+<li>根据每个资源来推断服务器请求的极限</li>
+</ul>
+<p>要检测的资源如下</p>
+<ul>
+<li>硬件6个指标: CPU使用率、内存使用、磁盘IOPS、磁盘吞吐量、磁盘使用率、网络吞吐量</li>
+<li>软件3个指标: 虚拟内存使用情况、进程/线程、文件描述符</li>
+</ul>
+<h2 id="因素分析"><a class="markdownIt-Anchor" href="#因素分析"></a> 因素分析</h2>
+<p>磁盘的容量、CPU的数目、RAM的大小、闪存、RAID的配置、文件系统设置等等，期待用最小的成本来实现需要的性能。</p>
+<p>那种组合是最优的？</p>
+<ol>
+<li>测试所有因素都设置为最大时的性能</li>
+<li>逐一改变因素，测试性能</li>
+<li>衡量性能和成本变化，选择合适的方案</li>
+<li>重新测试改变过的配置，确认性能达标</li>
+</ol>
+<h2 id="扩展方案"><a class="markdownIt-Anchor" href="#扩展方案"></a> 扩展方案</h2>
+<ul>
+<li>垂直扩展：超级计算机</li>
+<li>水平扩展：云计算</li>
+</ul>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
